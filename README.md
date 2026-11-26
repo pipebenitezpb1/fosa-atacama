@@ -29,10 +29,10 @@ Las tres condiciones extremas que nombra el caso se traducen en sensaciones:
 | **Escasez de alimento** | La nieve marina cae lentamente, y basta soltar un poco de carnada para que la vida aparezca desde la oscuridad |
 
 **Recorrido (unos 3 minutos):**
-1. **Superficie.** De noche, en la cubierta de un barco frente a Antofagasta. La persona **baja la palanca** para soltar el lander al mar.
+1. **Superficie.** Al amanecer, en la cubierta de un barco de investigación frente a Antofagasta. La persona **baja la palanca** para soltar el lander al mar.
 2. **Descenso.** Unos 50 segundos de caída libre. El agua pasa de azul a negro, la nieve marina sube alrededor y aparecen medusas y destellos de bioluminiscencia. Se cruzan los 200 m (fin de la luz del sol), los 1.000 m, la zona abisal, la zona hadal y los 7.000 m, profundidad donde cabría el Aconcagua completo.
 3. **El fondo.** Golpe al tocar fondo y oscuridad total. La persona **baja la palanca** para encender los focos y aparece el lecho de la fosa.
-4. **La carnada.** La persona **suelta la carnada**. Llega un enjambre de anfípodos y, desde la oscuridad, un pez caracol.
+4. **La carnada.** La persona **baja el brazo con la carnada** frente a la cámara. Llega un enjambre de anfípodos y, desde la oscuridad, tres peces caracol.
 5. **Especies nuevas.** *Paraliparis selti* («selti» significa azul en kunza) y *Dulcibella camanchaca*, un crustáceo cazador hallado a 7.902 m y nombrado como la niebla del desierto.
 6. **Atacamex 2018.** El cierre con el hito chileno: científicos del Instituto Milenio de Oceanografía llevaron por primera vez un lander a la parte más profunda de la fosa, a 8.081 m.
 
@@ -41,10 +41,13 @@ Las tres condiciones extremas que nombra el caso se traducen en sensaciones:
 ### En Meta Quest (experiencia principal)
 1. Abre la URL en el **navegador del Meta Quest**.
 2. Presiona **Entrar en realidad virtual**.
-3. Usa los **dos controles**:
-   - **Agarrar la palanca:** acerca la mano a la manija, mantén el **gatillo** (o el botón lateral) y **tira hacia ti**. El control vibra al moverla.
-   - **Linterna:** va en la mano izquierda. Apunta para iluminar.
-   - **Continuar:** aprieta el gatillo lejos de la palanca.
+3. Frente a ti hay una consola con una **palanca**. Se puede accionar de cuatro maneras:
+   - **Empujarla con la mano hacia ti**, sin apretar ningún botón.
+   - **Agarrarla** con el gatillo o el botón lateral del control y tirar. El control vibra.
+   - **Apuntarle** con el control y apretar el gatillo.
+   - Apretar **A** o **X**, o **juntar el índice y el pulgar** si usas las manos sin controles.
+4. **Linterna:** va en la mano izquierda si usas controles; si usas solo las manos, va en la cabeza.
+5. **Continuar:** aprieta el gatillo o junta los dedos.
 
 Se recomienda jugarla **de pie** y despejar un círculo de un metro a tu alrededor. La persona nunca se desplaza: el lander es un marco fijo, lo que evita el mareo durante el descenso.
 
@@ -63,12 +66,11 @@ Presiona **Ver en pantalla**, arrastra para mirar y usa el botón de acción o *
 
 | Tecnología | Uso |
 |---|---|
-| **A-Frame 1.6 (WebXR)** | Escena VR para Meta Quest: controles con `hand-controls`, vibración de los controles y panel de textos dentro de la escena |
-| **Three.js** (dentro de A-Frame) | Componentes propios: océano con oleaje, barco, lander, nieve marina y bioluminiscencia con partículas, medusas, fondo marino procedural, enjambre de anfípodos con `InstancedMesh`, pez caracol articulado, focos y linterna con `SpotLight`, palanca que se agarra con la mano |
-| **Web Audio API** | Sonido generado en tiempo real: olas, rumor del océano, sonar con eco, crujidos de presión, golpe al tocar fondo. No usa archivos de audio con derechos |
-| **Canvas 2D** | Textos dentro de la escena (con tildes y ñ) para el panel VR y la etiqueta de la palanca |
-
-Todos los modelos 3D se generan por código, sin modelos de terceros.
+| **A-Frame 1.6 (WebXR)** | Escena VR para Meta Quest con controles (`hand-controls`) y con manos sin controles (`hand-tracking-controls`), vibración y panel de textos dentro de la escena |
+| **Three.js** con shaders propios (GLSL) | Océano con oleaje y reflejo del cielo, agua que cambia de color con la profundidad, superficie vista desde abajo, rayos de sol, nieve marina que solo se ve donde la ilumina un haz, haces de luz volumétricos, nubes de sedimento, medusas y bioluminiscencia |
+| **Materiales PBR** | Texturas fotográficas de barro, acero y roca, con mapa de entorno tomado de una foto real de un amanecer, y tono cinematográfico (ACES) |
+| **Modelado por código** | Barco de investigación, lander con sus instrumentos, peces caracol de cuerpo translúcido que ondula, enjambre de anfípodos con `InstancedMesh`, cardumen y pepinos de mar |
+| **Web Audio API** | Sonido generado en tiempo real: olas, rumor del océano, sonar con eco, crujidos de presión y golpe al tocar fondo |
 
 ## Estructura del repositorio
 
@@ -76,8 +78,14 @@ Todos los modelos 3D se generan por código, sin modelos de terceros.
 fosa-atacama/
 ├── index.html            Escena A-Frame e interfaz en pantalla
 ├── css/estilos.css       Estilos de la interfaz en pantalla
+├── assets/               Fotografía del cielo y texturas PBR (Poly Haven, CC0)
 ├── js/
-│   ├── componentes.js    Componentes A-Frame (océano, lander, nieve marina, fauna, palanca, panel VR…)
+│   ├── base.js           Estado, luz compartida entre shaders, texturas y utilidades de modelado
+│   ├── superficie.js     Cielo, océano, costa, barco y chapuzón
+│   ├── lander.js         Lander con focos, cámara, instrumentos y brazo de carnada
+│   ├── agua.js           Columna de agua, nieve marina, burbujas, medusas, cardumen y fondo
+│   ├── fauna.js          Anfípodos y peces caracol
+│   ├── interaccion.js    Palanca, linterna, panel VR y manejo de controles y manos
 │   ├── principal.js      Relato, descenso, ambiente según profundidad, modo VR y modo pantalla
 │   ├── narrativa.js      Textos de cada etapa, zonas de profundidad y puntos de vista
 │   └── sonido.js         Paisaje sonoro con Web Audio
@@ -107,8 +115,14 @@ La experiencia se publica en **https://portafolio.insta3d.cl/fosa-atacama/**, de
 - La presión aumenta cerca de 1 atmósfera cada 10 metros, así que a 8.000 m es unas 800 veces la de la superficie.
 - *Paraliparis selti* fue descrito formalmente en 2022 y se ha observado aproximadamente entre 6.000 y 7.600 m. El pez de la experiencia es una representación estilizada.
 - *Dulcibella camanchaca* fue recolectado a 7.902 m en una expedición de 2023 y descrito en 2024, con participación del Instituto Milenio de Oceanografía.
-- Las medusas y destellos del descenso representan la bioluminiscencia en general, no especies identificadas de la fosa.
+- Las medusas, el cardumen, los destellos del descenso y los pepinos de mar del fondo son fauna representativa, no especies identificadas de la fosa.
 
 ## Créditos
 
 Diseño, programación y modelado 3D: Luis Felipe Benítez.
+
+**Recursos de terceros**, todos de [Poly Haven](https://polyhaven.com) con licencia **CC0** (dominio público):
+- Cielo: panorámica *Umhlanga Sunrise*.
+- Texturas: *Brown Mud 03* (sedimento), *Metal Plate* (cubierta), *Green Metal Rust* (casco y lastre) y *Boulder 01* (rocas).
+
+Los modelos 3D (barco, lander y fauna) están hechos por código. El pez caracol y los anfípodos son representaciones a partir de las descripciones e imágenes publicadas, no modelos anatómicos exactos.
