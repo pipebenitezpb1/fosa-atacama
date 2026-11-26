@@ -12,7 +12,7 @@
 |---|---|---|
 | 0:00 – 0:06 | Amanecer en la cubierta del barco: el sol sale sobre la costa de Antofagasta. | Olas. **Voz:** *"Frente a Antofagasta, el océano esconde una grieta de casi 8.000 metros."* |
 | 0:06 – 0:12 | Corte a la persona con visor bajando la palanca en el aire. En la vista del visor, el lander cae al mar. | Clic de la palanca y chapuzón. |
-| 0:12 – 0:30 | Descenso: el azul se vuelve negro, sube la nieve marina, aparecen medusas y el medidor de profundidad corre. | Sonar con eco, rumor grave, crujidos. **Voz:** *"A los 200 metros se acaba la luz del sol. A los 7.000 cabría el Aconcagua completo. Abajo, la presión es 800 veces la de la superficie."* |
+| 0:12 – 0:30 | Descenso: el azul se vuelve negro, aparecen medusas, pasa el sumergible Limiting Factor con sus luces y se ve la pared de la fosa. | Sonar con eco, rumor grave, crujidos. **Voz:** *"A los 200 metros se acaba la luz del sol. A los 7.000 cabría el Aconcagua completo. Abajo, la presión es 800 veces la de la superficie."* |
 | 0:30 – 0:36 | Golpe al tocar fondo. Negro total. La mano baja la palanca y se encienden los focos sobre el lecho de la fosa. | Golpe grave y silencio. Zumbido de los focos. **Voz:** *"Ocho mil metros. Oscuridad total."* |
 | 0:36 – 0:48 | El brazo baja la carnada, llega el enjambre de anfípodos y los peces caracol aparecen desde la oscuridad. | **Voz:** *"Y aun así, aquí hay vida: especies que la ciencia no conocía."* |
 | 0:48 – 0:56 | Plano del pez caracol girando alrededor de la carnada. | **Voz:** *"En 2018, científicos chilenos llegaron por primera vez al punto más profundo de la Fosa de Atacama."* |
