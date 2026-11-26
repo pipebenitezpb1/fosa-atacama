@@ -4,6 +4,7 @@
 Postulación al concurso **Chile Re-Descubre** (Congreso Futuro · ACHIPEC · CRTIC)
 
 - 🔗 **Experiencia en línea:** https://portafolio.insta3d.cl/fosa-atacama/
+- 🔗 **Copia en GitHub Pages:** https://pipebenitezpb1.github.io/fosa-atacama/
 - 🎬 **Cápsula audiovisual (1 min):** `<enlace al video>`
 
 ---
@@ -18,7 +19,7 @@ Frente a las costas de Chile se extiende uno de los ambientes más extremos y de
 
 > **Un lugar al que ningún ser humano puede ir, vivido en primera persona.**
 
-La realidad virtual es la única forma de "estar" a 8.000 metros de profundidad. La persona viaja dentro de un **lander**, el vehículo sin tripulación que usan los científicos para llegar al fondo de la fosa, y **lo opera con sus propias manos**, como los investigadores que lo controlan desde el barco.
+La realidad virtual es la única forma de "estar" a 8.000 metros de profundidad. La persona acompaña al **Audacia**, el lander sin tripulación que la expedición Atacamex llevó al fondo de la fosa en 2018. Un lander cae libre y trabaja solo, sin que nadie lo maneje desde el barco; en la experiencia, la persona acciona con sus manos lo que el lander real hace de forma automática: soltarse, tomar muestras de agua, encender los focos, bajar la carnada y soltar el lastre para volver.
 
 Las tres condiciones extremas que nombra el caso se traducen en sensaciones:
 
