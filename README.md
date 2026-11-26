@@ -30,19 +30,20 @@ Las tres condiciones extremas que nombra el caso se traducen en sensaciones:
 
 **Recorrido (unos 3 minutos):**
 1. **Superficie.** Al amanecer, en la cubierta de un barco de investigación frente a Antofagasta. La persona **baja la palanca** para soltar el lander al mar.
-2. **Descenso (unos 100 segundos), narrado hito por hito:**
+2. **Descenso (unos 100 segundos), narrado hito por hito.** En tres tramos la persona puede **tomar una muestra de agua** con la palanca, y varios animales **reaccionan a la linterna**:
    - **0 m:** la superficie se ve desde abajo y se aleja; burbujas y un cardumen.
-   - **200 m:** se acaba la luz del sol.
-   - **1.000 m:** zona de medianoche, con medusas y destellos de bioluminiscencia.
-   - **4.000 m:** zona abisal, a unos 2 °C y más de 400 atmósferas.
-   - **5.400 m:** aparece el sumergible **Limiting Factor**, en el que Osvaldo Ulloa y Victor Vescovo bajaron a 8.069 m el 21 de enero de 2022. Se muestra una ficha con una fotografía real del sumergible.
-   - **6.000 m:** zona hadal; las paredes de la fosa se cierran alrededor.
-   - **7.000 m:** una línea de sensores como las del observatorio **IDOOS**, instalado por Chile desde 2023.
+   - **200 m:** se acaba la luz del sol y empieza la zona de mínimo de oxígeno. Pasan **jibias**, que destellan y escapan si las alumbras, y un banco de **peces linterna**, que se dispersa con la luz.
+   - **1.000 m:** zona de medianoche. Las medusas responden con un destello cuando las alumbras. *Primera muestra de agua.*
+   - **4.000 m:** zona abisal. Aparece la ladera de la fosa, con **peces granadero**. *Segunda muestra de agua.*
+   - **5.400 m:** el sumergible **Limiting Factor** (inmersión del 21 de enero de 2022), con una ficha y fotografía real.
+   - **6.000 m:** zona hadal, con **congrios de profundidad** entre las rocas.
+   - **7.000 m:** una línea de sensores como las del observatorio **IDOOS**. *Tercera muestra de agua.*
    - **7.700 m:** llegando al fondo.
 3. **El fondo.** Golpe al tocar fondo y oscuridad total. La persona **baja la palanca** para encender los focos y aparece el lecho de la fosa.
-4. **La carnada.** La persona **baja el brazo con la carnada** frente a la cámara. Llega un enjambre de anfípodos y, desde la oscuridad, tres peces caracol.
-5. **Especies nuevas.** *Paraliparis selti* («selti» significa azul en kunza) y *Dulcibella camanchaca*, un crustáceo cazador hallado a 7.902 m y nombrado como la niebla del desierto.
-6. **Expediciones chilenas desde 2018.** El cierre: en 2018, la expedición Atacamex llevó el lander Audacia a 8.081 m, la primera vez que la ciencia chilena tocó el punto más profundo de la fosa.
+4. **La carnada.** La persona **baja el brazo con la carnada** frente a la cámara. Llega un enjambre de anfípodos, tres peces caracol y, caminando sobre el sedimento, isópodos de patas largas. Alrededor pastan pepinos de mar.
+5. **Especies nuevas.** El anfípodo gigante *Eurythenes atacamensis*, el pez caracol azul *Paraliparis selti* y el cazador *Dulcibella camanchaca*.
+6. **El regreso.** La persona **suelta el lastre** y el lander sube solo hasta la luz.
+7. **De vuelta en la superficie.** Una ficha resume lo que hizo (profundidad, muestras y especies vistas) junto al hito real: en 2018, el Audacia tocó por primera vez el punto más profundo de la fosa, a 8.081 m.
 
 ## Cómo usarla
 
@@ -90,10 +91,10 @@ fosa-atacama/
 ├── js/
 │   ├── base.js           Estado, luz compartida entre shaders, texturas y utilidades de modelado
 │   ├── superficie.js     Cielo, océano, costa, barco y chapuzón
-│   ├── lander.js         Lander con focos, cámara, instrumentos y brazo de carnada
+│   ├── lander.js         Lander Audacia con focos, cámara, instrumentos y brazo de carnada
 │   ├── agua.js           Columna de agua, nieve marina, burbujas, medusas, cardumen y fondo
-│   ├── fauna.js          Anfípodos y peces caracol
-│   ├── descenso.js       Sumergible Limiting Factor, línea de sensores IDOOS, pared de la fosa y ficha con foto
+│   ├── fauna.js          Anfípodos, peces caracol, granaderos, congrios e isópodos
+│   ├── descenso.js       Sumergible, línea de sensores IDOOS, laderas de la fosa, jibias, peces linterna y ficha con foto
 │   ├── interaccion.js    Palanca, linterna, panel VR y manejo de controles y manos
 │   ├── principal.js      Relato, descenso, ambiente según profundidad, modo VR y modo pantalla
 │   ├── narrativa.js      Textos de cada etapa, zonas de profundidad y puntos de vista
@@ -121,6 +122,9 @@ La experiencia se publica en **https://portafolio.insta3d.cl/fosa-atacama/**, de
 - Marine Technology News (2018): [A Record-setting Journey to the Atacama Trench](https://www.marinetechnologynews.com/news/record-setting-journey-atacama-560175), sobre el lander Audacia.
 - Caladan Oceanic: [Atacama Trench](https://caladanoceanic.com/?p=5914), e Instituto Milenio de Oceanografía: [Atacama Hadal](https://imo.udec.cl/en/?p=1214), sobre la inmersión tripulada de 2022.
 - Instituto Milenio de Oceanografía: [IDOOS](https://imo.udec.cl/en/expediciones-y-observatorio/idoos/), y POGO: [Chile completes the installation of its first Integrated Deep-Ocean Observing System](https://pogo-ocean.org/?p=120137).
+- Weston et al. (2021), *Marine Biodiversity*: [*Eurythenes atacamensis* sp. nov.](https://link.springer.com/article/10.1007%2Fs12526-021-01182-z).
+- Linley et al., Ocean Sciences Meeting 2020: [Hadal Bait-Attending Fish of the Atacama Trench](https://agu.confex.com/agu/osm20/preliminaryview.cgi/Paper647522.html), y The Conversation (2018): [Snailfish: how we found a new species](https://theconversation.edu.au/snailfish-how-we-found-a-new-species-in-one-of-the-oceans-deepest-places-103003), sobre la fauna registrada por las cámaras.
+- Meteored (IMO): [Científicos nacionales explorarán zona de mínimo de oxígeno](https://www.meteored.cl/noticias/ciencia/cientificos-nacionales-exploraran-zona-de-minimo-de-oxigeno-del-oceano-al-norte-de-chile.html).
 - Woods Hole Oceanographic Institution (2024): [*Dulcibella camanchaca*](https://www.whoi.edu/press-room/news-release/dulcibella-camanchaca). 24 Horas: [nueva especie de crustáceo depredador en la Fosa de Atacama](https://www.24horas.cl/tendencias/tecnologia-y-ciencias/hallan-nueva-especie-crustaceo-depredador-fosa-atacama).
 
 **Notas de rigor:**
@@ -129,6 +133,11 @@ La experiencia se publica en **https://portafolio.insta3d.cl/fosa-atacama/**, de
 - *Dulcibella camanchaca* fue recolectado a 7.902 m en una expedición de 2023 y descrito en 2024, con participación del Instituto Milenio de Oceanografía.
 - La inmersión tripulada de 2022 llegó a 8.069 m (± 8 m) según Caladan Oceanic. En la experiencia, el sumergible aparece a media bajada como recurso narrativo.
 - IDOOS incluye líneas de sensores de corrientes, temperatura, salinidad, presión y oxígeno, y sensores de presión en el fondo. La línea que se ve es una representación, no una réplica de sus equipos.
+- En la experiencia la persona acompaña al Audacia flotando a su lado: el lander real es una torre de unos 60 cm de lado y no lleva a nadie. Los focos, la cámara y el brazo de carnada son elementos de la experiencia; no sé si el Audacia real los llevaba así.
+- **Fauna con registro en la fosa:** peces granadero entre 4.000 y 5.500 m, congrios de profundidad (*Bassozetus*) en la transición hacia la zona hadal, peces caracol entre 6.000 y 7.600 m, isópodos munnópsidos del tamaño de una mano, anfípodos (entre ellos *Eurythenes atacamensis*, de hasta 8,3 cm) y praderas de pepinos de mar cerca de los 8.060 m. En la experiencia aparecen a esas profundidades, salvo los peces caracol, que se muestran en el fondo como recurso narrativo.
+- **Fauna representativa, sin registro propio de estas expediciones:** las jibias, los peces linterna, las medusas y el cardumen de superficie. Son animales de las aguas frente a Chile o del océano profundo en general.
+- Las reacciones a la linterna (el destello de la jibia y de las medusas, la dispersión de los peces linterna) son comportamientos descritos para estos grupos, simplificados.
+- La zona de mínimo de oxígeno del norte de Chile se ubica aproximadamente entre los 50 y los 450 m, según el Instituto Milenio de Oceanografía.
 - Las medusas, el cardumen, los destellos del descenso y los pepinos de mar del fondo son fauna representativa, no especies identificadas de la fosa.
 
 ## Créditos
@@ -141,4 +150,4 @@ Diseño, programación y modelado 3D: Luis Felipe Benítez.
 - Cielo: panorámica *Umhlanga Sunrise*.
 - Texturas: *Brown Mud 03* (sedimento), *Metal Plate* (cubierta), *Green Metal Rust* (casco y lastre) y *Boulder 01* (rocas).
 
-Los modelos 3D (barco, lander, sumergible y fauna) están hechos por código; el sumergible se modeló mirando fotografías publicadas. El pez caracol y los anfípodos son representaciones a partir de las descripciones e imágenes publicadas, no modelos anatómicos exactos.
+Los modelos 3D (barco, lander, sumergible y fauna) están hechos por código. El lander **Audacia** y el sumergible se modelaron mirando fotografías publicadas: el Audacia es una torre blanca y angosta con esferas de vidrio, cilindros negros, antenas y un banderín verde. El pez caracol y los anfípodos son representaciones a partir de las descripciones e imágenes publicadas, no modelos anatómicos exactos.
